@@ -107,8 +107,21 @@ article h2 {
   display: none;
 
   position: absolute;
+
   right: 0;
-  top: 35px;
+  bottom: 35px;
+
+  background: #3a3a3c;
+
+  border: 2px solid #ffb6c1;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  min-width: 120px;
+
+  z-index: 999;
 
   background: #3a3a3c;
 
@@ -120,8 +133,7 @@ article h2 {
 
   min-width: 120px;
 }
-
-.menu:hover .dropdown {
+.dropdown.show {
   display: block;
 }
 
