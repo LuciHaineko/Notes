@@ -9,8 +9,6 @@ body {
   color: white;
 }
 
-/* HEADER */
-
 header {
   width: 100%;
   padding: 20px 30px;
@@ -28,8 +26,6 @@ header h1 {
   margin: 0;
   font-size: 30px;
 }
-
-/* CREATE BUTTON */
 
 #create {
   width: 45px;
@@ -53,16 +49,12 @@ header h1 {
   background: #ff77a5;
 }
 
-/* MAIN */
-
 main {
   width: 90%;
   max-width: 900px;
   margin: auto;
   margin-top: 30px;
 }
-
-/* NOTES */
 
 article {
   background: #2c2c2e;
@@ -89,8 +81,6 @@ article h2 {
   margin: 0;
 }
 
-/* MENU */
-
 .menu {
   position: absolute;
   right: 20px;
@@ -100,8 +90,6 @@ article h2 {
 
   cursor: pointer;
 }
-
-/* DROPDOWN */
 
 .dropdown {
   display: none;
@@ -157,8 +145,6 @@ article h2 {
   color: #ff453a;
 }
 
-/* EDITOR */
-
 .editorSection,
 .readSection {
   background: #2c2c2e;
@@ -169,8 +155,6 @@ article h2 {
 
   padding: 20px;
 }
-
-/* TOOLBAR */
 
 .toolbar {
   display: flex;
@@ -199,8 +183,6 @@ article h2 {
   background: #505053;
 }
 
-/* INPUT */
-
 input {
   width: 100%;
 
@@ -220,8 +202,6 @@ input {
   font-size: 18px;
 }
 
-/* EDITOR */
-
 .editor {
   min-height: 300px;
 
@@ -239,8 +219,6 @@ input {
 
   margin-top: 10px;
 }
-
-/* SAVE BUTTON */
 
 .saveButton {
   margin-top: 20px;
@@ -264,8 +242,6 @@ input {
   background: #ff77a5;
 }
 
-/* READ */
-
 .readText {
   margin-top: 20px;
 
@@ -279,8 +255,6 @@ input {
 
   min-height: 200px;
 }
-
-/* CONFIRM */
 
 .confirmBox {
   position: fixed;
