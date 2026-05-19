@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
 
-    <title>Poznámky</title>
+    <title>Čtení poznámky</title>
 
     <script src="server.js"></script>
     <script
@@ -18,17 +18,20 @@
       href="style.css" />
   </head>
 
-  <body>
+  <body onload="loadReadNote()">
     <header>
-      <h1>Poznámky</h1>
-
-      <button
-        id="create"
-        onclick="createNote()">
-        +
-      </button>
+      <h1>Pouze pro čtení</h1>
     </header>
 
-    <main id="notes"></main>
+    <main>
+      <section class="readSection">
+        <h2 id="readName"></h2>
+
+        <div
+          id="readText"
+          class="readText"
+          title="Pouze pro čtení"></div>
+      </section>
+    </main>
   </body>
 </html>

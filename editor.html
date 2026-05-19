@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <title>Editor</title>
+
+    <script src="server.js"></script>
+    <script
+      src="app.js"
+      defer></script>
+
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+
+  <body onload="loadNote()">
+    <header>
+      <h1>Editor poznámky</h1>
+    </header>
+
+    <main>
+      <section class="editorSection">
+        <div class="toolbar">
+          <button onclick="formatText('bold')"><b>B</b></button>
+
+          <button onclick="formatText('italic')">
+            <i>I</i>
+          </button>
+
+          <button onclick="alignText('left')">Left</button>
+
+          <button onclick="alignText('center')">Center</button>
+
+          <button onclick="alignText('right')">Right</button>
+        </div>
+
+        <label>
+          Název poznámky
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Napiš název..." />
+        </label>
+
+        <label>
+          Text poznámky
+
+          <div
+            id="text"
+            class="editor"
+            contenteditable="true"></div>
+        </label>
+
+        <button
+          class="saveButton"
+          onclick="saveNote()">
+          Uložit poznámku
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
