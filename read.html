@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <title>Čtení poznámky</title>
+
+    <script src="server.js"></script>
+    <script
+      src="app.js"
+      defer></script>
+
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+
+  <body onload="loadReadNote()">
+    <header>
+      <h1>Pouze pro čtení</h1>
+    </header>
+
+    <main>
+      <section class="readSection">
+        <h2 id="readName"></h2>
+
+        <div
+          id="readText"
+          class="readText"
+          title="Pouze pro čtení"></div>
+      </section>
+    </main>
+  </body>
+</html>
