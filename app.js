@@ -1,9 +1,5 @@
 showNotes();
 
-// =========================
-// SHOW NOTES
-// =========================
-
 async function showNotes() {
   const data = await sql("SELECT * FROM notes");
 
@@ -16,22 +12,30 @@ async function showNotes() {
   data.forEach((note) => {
     const article = document.createElement("article");
 
-    // NAME
     const name = document.createElement("h2");
     name.innerText = note.name;
 
     article.appendChild(name);
 
-    // MENU
     const menu = document.createElement("div");
     menu.className = "menu";
     menu.innerText = "⋯";
 
-    // DROPDOWN
+    menu.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      document.querySelectorAll(".dropdown").forEach((d) => {
+        if (d !== dropdown) {
+          d.classList.remove("show");
+        }
+      });
+
+      dropdown.classList.toggle("show");
+    });
+
     const dropdown = document.createElement("div");
     dropdown.className = "dropdown";
 
-    // READ
     const readButton = document.createElement("button");
     readButton.innerText = "Read";
     readButton.className = "read";
@@ -40,7 +44,6 @@ async function showNotes() {
       window.location.href = "read.html?id=" + note.id;
     });
 
-    // UPDATE
     const updateButton = document.createElement("button");
     updateButton.innerText = "Update";
     updateButton.className = "update";
@@ -49,7 +52,6 @@ async function showNotes() {
       window.location.href = "editor.html?id=" + note.id;
     });
 
-    // DELETE
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
@@ -70,17 +72,9 @@ async function showNotes() {
   });
 }
 
-// =========================
-// CREATE
-// =========================
-
 function createNote() {
   window.location.href = "editor.html";
 }
-
-// =========================
-// SAVE
-// =========================
 
 async function saveNote() {
   const id = new URLSearchParams(window.location.search).get("id");
@@ -89,7 +83,6 @@ async function saveNote() {
 
   const text = document.getElementById("text").innerHTML;
 
-  // UPDATE
   if (id) {
     await sql(`
       UPDATE notes
@@ -97,10 +90,7 @@ async function saveNote() {
       text = '${text}'
       WHERE id = ${id}
     `);
-  }
-
-  // CREATE
-  else {
+  } else {
     await sql(`
       INSERT INTO notes (name, text)
       VALUES ('${name}', '${text}')
@@ -109,10 +99,6 @@ async function saveNote() {
 
   window.location.href = "index.html";
 }
-
-// =========================
-// LOAD NOTE
-// =========================
 
 async function loadNote() {
   const id = new URLSearchParams(window.location.search).get("id");
@@ -129,10 +115,6 @@ async function loadNote() {
   document.getElementById("text").innerHTML = data[0].text;
 }
 
-// =========================
-// READ NOTE
-// =========================
-
 async function loadReadNote() {
   const id = new URLSearchParams(window.location.search).get("id");
 
@@ -145,10 +127,6 @@ async function loadReadNote() {
 
   document.getElementById("readText").innerHTML = data[0].text;
 }
-
-// =========================
-// DELETE
-// =========================
 
 function confirmDelete(id, element) {
   const confirmBox = document.createElement("div");
@@ -163,7 +141,6 @@ function confirmDelete(id, element) {
 
   buttons.className = "confirmButtons";
 
-  // YES
   const yes = document.createElement("button");
 
   yes.className = "yes";
@@ -180,7 +157,6 @@ function confirmDelete(id, element) {
     confirmBox.remove();
   });
 
-  // NO
   const no = document.createElement("button");
 
   no.className = "no";
@@ -199,10 +175,6 @@ function confirmDelete(id, element) {
   document.body.appendChild(confirmBox);
 }
 
-// =========================
-// TOOLBAR
-// =========================
-
 function formatText(command) {
   document.execCommand(command);
 }
@@ -220,3 +192,9 @@ function alignText(position) {
     document.execCommand("justifyRight");
   }
 }
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach((dropdown) => {
+    dropdown.classList.remove("show");
+  });
+});
