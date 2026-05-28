@@ -102,15 +102,15 @@ header::after {
 
   pointer-events: none;
 }
-
 header h1 {
   margin: 0;
 
-  font-size: 32px;
+  font-size: 45px;
 
   color: #2f7a52;
+  text-shadow: 0 0 5px rgba(120, 255, 180, 0.3);
 
-  text-shadow: 0 0 10px rgba(120, 255, 180, 0.3);
+  font-family: "Monsieur La Doulaise", cursive;
 }
 
 #create {
