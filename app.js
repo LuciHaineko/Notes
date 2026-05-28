@@ -206,17 +206,10 @@ function toggleMode() {
   localStorage.setItem("darkMode", dark);
 }
 
-// LOAD MODE
-
 window.addEventListener("load", () => {
   const dark = localStorage.getItem("darkMode");
 
   if (dark === "true") {
     document.body.classList.add("dark");
   }
-});
-const createButton = document.getElementById("create");
-
-createButton.addEventListener("click", () => {
-  window.location.href = "editor.html";
 });
