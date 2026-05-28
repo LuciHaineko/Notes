@@ -215,3 +215,8 @@ window.addEventListener("load", () => {
     document.body.classList.add("dark");
   }
 });
+const createButton = document.getElementById("create");
+
+createButton.addEventListener("click", () => {
+  window.location.href = "editor.html";
+});
