@@ -102,15 +102,15 @@ header::after {
 
   pointer-events: none;
 }
-
 header h1 {
   margin: 0;
 
-  font-size: 32px;
+  font-size: 45px;
 
   color: #2f7a52;
+  text-shadow: 0 0 5px rgba(120, 255, 180, 0.3);
 
-  text-shadow: 0 0 10px rgba(120, 255, 180, 0.3);
+  font-family: "Monsieur La Doulaise", cursive;
 }
 
 #create {
@@ -147,9 +147,70 @@ main {
 
   margin: auto;
 
-  margin-top: 180px;
+  margin-top: 60px;
 
   position: relative;
+  z-index: 2;
+}
+.heroTitle {
+  width: 100%;
+  text-align: center;
+
+  margin-top: 35px;
+  margin-bottom: 25px;
+
+  font-family: "Monsieur La Doulaise", cursive;
+  font-size: 90px;
+  font-weight: 600;
+
+  text-transform: none;
+  letter-spacing: 1px;
+
+  color: #2f7a52;
+
+  text-shadow: 0 0 12px rgba(120, 255, 180, 0.25);
+
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle::before {
+  content: "✿";
+  margin-right: 18px;
+  color: rgba(120, 255, 180, 0.8);
+}
+
+.heroTitle::after {
+  content: "✿";
+  margin-left: 18px;
+  color: rgba(255, 182, 193, 0.8);
+}
+
+body.dark .heroTitle {
+  color: white;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+body.dark .heroTitle::before,
+body.dark .heroTitle::after {
+  color: rgba(255, 255, 255, 0.75);
+}
+.credit {
+  position: fixed;
+  left: 12px;
+  bottom: 10px;
+
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+
+  color: rgba(0, 0, 0, 0.6);
+
+  z-index: 999999;
+  pointer-events: none;
+}
+
+body.dark .credit {
+  color: rgba(255, 255, 255, 0.6);
 }
 article {
   background: linear-gradient(
