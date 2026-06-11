@@ -782,3 +782,152 @@ body.dark .backButton {
 
   color: white;
 }
+/* ===== MOBILNÍ VERZE ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 18px;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+
+  header::before,
+  header::after {
+    font-size: 26px;
+  }
+
+  #create {
+    width: 46px;
+    height: 46px;
+    font-size: 26px;
+  }
+
+  main {
+    width: 95%;
+    margin-top: 35px;
+  }
+
+  .heroTitle {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  article {
+    padding: 18px;
+  }
+
+  article h2 {
+    font-size: 20px;
+    padding-right: 35px;
+  }
+
+  article::before {
+    font-size: 60px;
+  }
+
+  article::after {
+    font-size: 32px;
+  }
+
+  .menu {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .dropdown {
+    min-width: 130px;
+  }
+
+  .editorSection,
+  .readSection {
+    padding: 18px;
+  }
+
+  .toolbar {
+    gap: 8px;
+  }
+
+  .toolbar button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .editor {
+    min-height: 260px;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .readText {
+    padding: 18px;
+    min-height: 180px;
+  }
+
+  .saveButton,
+  .backButton {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .confirmBox {
+    width: 90%;
+    max-width: 350px;
+    padding: 22px;
+  }
+
+  .confirmButtons {
+    flex-direction: column;
+  }
+
+  .modeSwitch {
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 12px;
+  }
+
+  .credit {
+    font-size: 13px;
+  }
+}
+
+/* Malé telefony */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 42px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header::before,
+  header::after {
+    display: none;
+  }
+
+  .toolbar button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .modeSwitch span {
+    display: none;
+  }
+
+  article::before,
+  article::after {
+    opacity: 0.4;
+  }
+
+  .credit {
+    display: none;
+  }
+}
