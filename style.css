@@ -745,3 +745,135 @@ body.dark .toolbar button:hover {
 body.dark .saveButton {
   color: #000;
 }
+/* Mobilní zařízení */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .heroTitle {
+    font-size: 60px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    width: 95%;
+    margin-top: 30px;
+  }
+
+  article {
+    padding: 18px;
+  }
+
+  article h2 {
+    font-size: 20px;
+    padding-right: 35px;
+  }
+
+  .menu {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .dropdown {
+    min-width: 130px;
+  }
+
+  .editorSection,
+  .readSection {
+    padding: 18px;
+  }
+
+  .toolbar {
+    gap: 8px;
+  }
+
+  .toolbar button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .editor {
+    min-height: 250px;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .readText {
+    padding: 18px;
+  }
+
+  .saveButton {
+    width: 100%;
+  }
+
+  .confirmBox {
+    width: 90%;
+    max-width: 350px;
+    padding: 22px;
+  }
+
+  .confirmButtons {
+    flex-direction: column;
+  }
+
+  .modeSwitch {
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 12px;
+  }
+
+  .credit {
+    font-size: 13px;
+    left: 8px;
+    bottom: 8px;
+  }
+
+  article::before {
+    font-size: 60px;
+  }
+
+  article::after {
+    font-size: 35px;
+  }
+}
+
+/* Velmi malé telefony */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 45px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  #create {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+  }
+
+  .toolbar button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .modeSwitch span {
+    display: none;
+  }
+
+  .credit {
+    display: none;
+  }
+}
