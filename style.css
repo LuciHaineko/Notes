@@ -873,7 +873,9 @@ body.dark .backButton {
 
   .saveButton,
   .backButton {
+    position: static;
     width: 100%;
+    margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
   }
