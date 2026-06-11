@@ -745,135 +745,40 @@ body.dark .toolbar button:hover {
 body.dark .saveButton {
   color: #000;
 }
-/* Mobilní zařízení */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
+.backButton {
+  margin: 25px;
 
-  header h1 {
-    font-size: 32px;
-  }
+  background: linear-gradient(135deg, #7dffb0, #d8ffe8);
 
-  .heroTitle {
-    font-size: 60px;
-    margin-top: 25px;
-    margin-bottom: 20px;
-  }
+  border: none;
 
-  main {
-    width: 95%;
-    margin-top: 30px;
-  }
+  color: #2f7a52;
 
-  article {
-    padding: 18px;
-  }
+  padding: 14px 22px;
 
-  article h2 {
-    font-size: 20px;
-    padding-right: 35px;
-  }
+  border-radius: 16px;
 
-  .menu {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
-  }
+  cursor: pointer;
 
-  .dropdown {
-    min-width: 130px;
-  }
+  font-weight: bold;
 
-  .editorSection,
-  .readSection {
-    padding: 18px;
-  }
+  font-size: 16px;
 
-  .toolbar {
-    gap: 8px;
-  }
+  transition: 0.25s;
 
-  .toolbar button {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
-  input {
-    font-size: 16px;
-    padding: 12px;
-  }
-
-  .editor {
-    min-height: 250px;
-    padding: 14px;
-    font-size: 16px;
-  }
-
-  .readText {
-    padding: 18px;
-  }
-
-  .saveButton {
-    width: 100%;
-  }
-
-  .confirmBox {
-    width: 90%;
-    max-width: 350px;
-    padding: 22px;
-  }
-
-  .confirmButtons {
-    flex-direction: column;
-  }
-
-  .modeSwitch {
-    right: 12px;
-    bottom: 12px;
-    padding: 10px 12px;
-  }
-
-  .credit {
-    font-size: 13px;
-    left: 8px;
-    bottom: 8px;
-  }
-
-  article::before {
-    font-size: 60px;
-  }
-
-  article::after {
-    font-size: 35px;
-  }
+  box-shadow: 0 6px 18px rgba(120, 255, 180, 0.35);
 }
 
-/* Velmi malé telefony */
-@media (max-width: 480px) {
-  .heroTitle {
-    font-size: 45px;
-  }
+.backButton:hover {
+  transform: translateY(-2px);
 
-  header h1 {
-    font-size: 26px;
-  }
+  box-shadow: 0 10px 25px rgba(120, 255, 180, 0.5);
+}
 
-  #create {
-    width: 45px;
-    height: 45px;
-    font-size: 26px;
-  }
+body.dark .backButton {
+  background: rgba(25, 25, 25, 0.92);
 
-  .toolbar button {
-    flex: 1 1 calc(50% - 8px);
-  }
+  border: 2px solid #5eff9b;
 
-  .modeSwitch span {
-    display: none;
-  }
-
-  .credit {
-    display: none;
-  }
+  color: white;
 }
