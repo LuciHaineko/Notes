@@ -213,3 +213,6 @@ window.addEventListener("load", () => {
     document.body.classList.add("dark");
   }
 });
+function goBack() {
+  window.location.href = "index.html";
+}
