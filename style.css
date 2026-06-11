@@ -782,7 +782,7 @@ body.dark .backButton {
 
   color: white;
 }
-/* ===== MOBILNÍ VERZE ===== */
+
 @media (max-width: 768px) {
   header {
     padding: 15px 18px;
@@ -899,7 +899,6 @@ body.dark .backButton {
   }
 }
 
-/* Malé telefony */
 @media (max-width: 480px) {
   .heroTitle {
     font-size: 42px;
